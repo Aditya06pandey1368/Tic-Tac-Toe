@@ -2,7 +2,7 @@ let elements = document.querySelectorAll(".element");
 let resetBtn = document.querySelector(".reset-btn")
 let newGameBtn = document.querySelector(".new")
 let msg = document.querySelector(".msg")
-let winner = document.querySelector(".Winner")
+let Winner = document.querySelector(".Winner")
 
 let turn = true;
 
@@ -46,8 +46,8 @@ const enableBtn = () =>{
     }
 }
 
-const showWinner = (winner) =>{
-    winner.innerText = `Congratulations, Winner is $(winner)`;
+const showWinner = (Winner) =>{
+    Winner.innerText = `Congratulations, Winner is $(Winner)`;
     msg.classList.remove("hide");
     disableBtn();
 };
