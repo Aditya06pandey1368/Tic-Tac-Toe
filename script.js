@@ -46,11 +46,6 @@ const enableBtn = () =>{
     }
 }
 
-const showWinner = (Winner) =>{
-    Winner.innerText = `Congratulations, Winner is $(Winner)`;
-    msg.classList.remove("hide");
-    disableBtn();
-};
 
 const checkWinner = () =>{
     for (let pattern of winPatterns){
@@ -70,6 +65,11 @@ const resetGame = () =>{
     turn = true;
     enableBtn();
     msg.classList.add("hide");
+};
+const showWinner = (Winner) =>{
+    Winner.innerHTML = "Winner";
+    msg.classList.remove("hide");
+    disableBtn();
 };
 
 newGameBtn.addEventListener("click", resetGame);
